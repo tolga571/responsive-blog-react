@@ -206,8 +206,12 @@ nav {
 
 .head-post-container .post-image {
     height: fit-content;
+    border: 1.4rem solid var(--color-white);
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.1);
 }
-
+.head-post-container .post-image img{
+    border-radius: var(--border-radius-3);
+}
 .head-post-container h1 {
     margin-bottom: 1.7rem;
     font-size: 2.4rem;
@@ -575,10 +579,11 @@ footer {
     font-weight: 300;
 }
 
-.form1-container{
+.form1-container {
     width: 50%;
 }
-.form1-container button{
+
+.form1-container button {
     width: 200px;
     margin: 0 auto;
     padding: .7rem;
@@ -591,7 +596,7 @@ footer {
 /* Media Screen - 1024px */
 @media (max-width:1024px) {
     h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important;
 
     }
 
@@ -664,7 +669,9 @@ footer {
     .head-post-container {
         gap: 2rem;
     }
-
+    .head-post-container h1{
+        font-size: 2rem !important;
+    }
     .posts-container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
@@ -674,54 +681,78 @@ footer {
     .authorPosts-container {
         gap: 2rem;
     }
+
+    /* Author posts */
+    .authorPosts-container {
+        gap: 2rem;
+    }
+
     /* categories posts */
-    .categoryPosts-container{
+    .categoryPosts-container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+
     /* PostDetail */
-    .PostDetail-container{
+    .PostDetail-container {
         width: 70%;
     }
-    .author-container{
+
+    .author-container {
         grid-template-columns: 1fr 1fr;
-        gap:2rem;
+        gap: 2rem;
     }
+
     /* Form Container */
-    .form-container{
+    .form-container {
         width: 70%;
+    }
+    /* Dashboard */
+    .dashboard-post{
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 /* Media Screen - 600px */
 @media (max-width:600px) {
-    .head-post-container{
+    .head-post-container {
         grid-template-columns: 1fr;
     }
-    .head-post-container .post-image{
+
+    .head-post-container .post-image {
         grid-row: 1;
     }
-    .posts-container{
+
+    .posts-container {
         grid-template-columns: 1fr;
     }
-     /* Author posts */
-     .authorPosts-container {
+
+    /* Author posts */
+    .authorPosts-container {
         grid-template-columns: 1fr;
     }
+
     /* categories posts */
-    .categoryPosts-container{
+    .categoryPosts-container {
         grid-template-columns: 1fr;
     }
+
     /* PostDetail */
-    .PostDetail-container{
-        width: 70%;
+    .PostDetail-container {
+        width: 90%;
+        background: transparent;
+        padding: 0;
     }
-    .author-container{
+
+    .author-container {
         grid-template-columns: 1fr;
     }
+
     /* Form Container */
-    .form-container{
+    .form-container {
         width: 90%;
     }
 }
+
 /* End Media Screen */
